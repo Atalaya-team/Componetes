@@ -1,0 +1,22 @@
+$color-primario:#13f113;
+$color-secundario:#f1f1f1;
+
+.edit{
+
+color: $color-secundario;
+
+
+}
+.edit span{
+color:$color-primario;
+
+}
+
+.nav-item a:hover{
+ background: $color-primario;
+
+}
+
+.active {
+    background: $color-primario;
+}

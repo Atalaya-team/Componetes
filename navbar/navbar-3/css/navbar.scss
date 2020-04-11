@@ -1,0 +1,119 @@
+
+$font-menu : rgb(135, 138, 139);
+$font-menu-hover: rgb(24, 119, 207); 
+$white:white;
+
+*{
+ padding: 0;
+ margin: 0; 
+ font-family:"Montserrat";  
+}
+
+.navbar{
+ position: fixed;
+ height: 80px;
+ width: 100%;
+ overflow: hidden;
+ top: 0;
+ display: flex;
+ align-items: center;
+ background:$white;
+ line-height: 56px;
+ box-shadow: 0.5px 0.2px 2px ;
+
+}
+
+.logo{
+    background: url(../img/atalaya.gif) no-repeat 50% 50%;
+    background-size: contain;
+    width: 180px;
+    height: 60px;
+    float: left;
+    margin-left: 20px;
+
+}
+.menu{
+  position: absolute;
+  right:20px;
+}
+
+.menu a{
+ color: $font-menu;
+ text-decoration: none;
+ font-weight: 700;
+ margin-left: 20px;
+ transition: color 0.3s;
+ text-transform: uppercase;
+
+ 
+}
+
+.btn{
+    display: none;
+    right: 20px;
+    position: absolute;
+
+}
+.btn span{
+    display: block;
+    margin: 6px;
+    width: 40px;
+    height: 3px;
+    background: $font-menu;
+}
+
+.menu a:hover{
+
+    color: $font-menu-hover;
+    
+
+}
+
+@media only screen and (max-width:766px){
+.navbar{
+    overflow: visible;
+    
+}
+ .menu{
+     width: 100%;
+     right: 0;
+     top: 80px;
+     background-color: $white;
+     overflow: scroll;
+     max-height: 0;
+     box-shadow: 0.5px 0.2px 2px ;
+ }
+ .menu a{
+     display: block;
+     text-align: center;
+     padding: 0;
+     margin: 0;
+ }
+.btn{
+    display: block;
+    cursor: pointer;
+}
+.show{
+   max-height: 500px;
+  
+   
+}
+.show2{
+    
+    box-shadow: none;
+ }
+ 
+ .menu a:hover{
+    padding: 1px;
+    border-bottom: solid 1px;
+    border-color: $font-menu-hover;
+   
+
+ }
+
+ .btn:hover > span {
+     background: $font-menu-hover;
+
+ }
+
+}

@@ -1,0 +1,210 @@
+
+/* definimos las varibles */
+$primary:#137ffa ;
+$white:white;
+$secondary :#f53af7;
+$select:#3571fd;
+$text0:#f53af7 ; 
+
+/* abarcamo toda la pantalla */
+*{
+padding: 0;
+margin: 0;
+}
+
+/* Asinamos un fuente */
+body{
+    
+font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+background: url(./img.jpg);
+}
+
+/* damos stilos al contenedor del  logo */
+.logo-nav{
+    
+    height: 180px;
+    background: url(../img/img2.jpg ) ;
+  }
+
+.logo-nav > h1{
+ color: $primary;
+ margin-bottom:70px ;
+ 
+ margin-left: 30px;
+ padding-top: 70px;
+ margin-left:20px;
+ font-size:40px;
+
+
+}
+
+.logo-nav > h1 > span{
+
+color: $secondary;
+
+
+}
+/* asignamos estelilos al ul del nav */
+.list-menu{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  }
+
+  
+.list-menu > a {
+    text-decoration:none;
+    text-decoration: none;
+  
+  }
+
+  nav{
+   background: $white;
+   height:60px;
+   width: 100%;
+ 
+}
+
+  nav > ul {
+      float: right;
+      margin-right: 20px;
+    
+  }
+
+  nav ul li {
+     
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+
+  }
+
+  nav ul li a {
+      color: $text0;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 7px 13px;
+      
+      text-transform: uppercase;
+      
+}
+/* cremos el selec */
+a.active,a:hover{
+    border: solid 0.5px;
+   
+    border-radius: 6px;
+    border-color: $select;
+    transition: .5s ;
+    -webkit-transition: .5s ;
+    -moz-transition: .5s ;
+    -ms-transition: .5s ;
+    -o-transition: .5s ;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    box-shadow: 0.5px 0.5px 1px $select ;
+}
+/* escodemos la barra resposive  */
+.menu-btn{
+ font-size:40px;
+ color: $white;
+ float:right;
+ line-height: 60px;
+ margin-right: 40px;
+ cursor: pointer;
+ display: none;
+
+}
+
+@media (max-width:952px){
+
+    nav ul li a {
+        color: $text0;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        
+  }
+
+
+}
+@media(max-width:850px){
+    .logo-nav{
+        background: transparent;
+        position:absolute ;
+        top:-60px;
+        padding-top: 0;
+        
+      }
+      
+      .logo-nav > h1{
+        color: $white;
+        font-size: 30px;
+      
+      }
+      
+      .menu-btn{
+          display: block;
+      }
+
+      nav{
+       background: $primary;
+      
+       border-radius: none;
+       -webkit-border-radius: none;
+       -moz-border-radius: none;
+       -ms-border-radius: none;
+       -o-border-radius: none;
+}
+
+    ul{
+        top: 60px;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background:#022a66 ;
+        left: 0;
+        transition:all .5s ;
+        -webkit-transition:all .5s ;
+        -moz-transition:all .5s ;
+        -ms-transition:all .5s ;
+        -o-transition:all .5s ;
+}  
+
+    nav ul li  {
+     
+    display:block;
+   
+
+     }
+
+     nav ul li  a {
+     
+     color: $white;
+     
+  
+       }
+     a.active,a:hover{
+        background: none;
+        color: $select;
+        
+    }
+
+    #check:checked  ~ ul {
+        left: -100%;
+    }
+
+}
+
+
